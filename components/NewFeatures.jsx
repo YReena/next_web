@@ -1,6 +1,6 @@
 import styles from '../styles';
 
-const NewFeatures = ({imgUrl,title,subtitle}) => (
+const NewFeatures = ({ imgUrl, title, subtitle }) => (
   <div className="flex-1 flex flex-col sm:max-w-[250px] min-w-[210px]">
     <div
       className={`${styles.flexCenter} w-[50px] h-[50px] rounded-[24px] bg-[#323F5D]`}
