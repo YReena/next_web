@@ -1,15 +1,14 @@
 'use client';
 
-import { textContainer, textVariant2, textVariants } from "../utils/motion";
 import { motion } from 'framer-motion';
+import { textContainer, textVariant2 } from '../utils/motion';
 
 export const TypingText = ({ title, textStyles }) => (
   <motion.p variants={textContainer}
     className={`font-normal text-[14px] text-secondary-white ${textStyles}`}
   >
     {Array.from(title).map((Letter, index) => (
-      <motion.span variants={textVariants} key={index}
-      >
+      <motion.span variants={textVariant2} key={index}>
         {Letter === ' ' ? '\u00A0' : Letter}
       </motion.span>
     ))}
@@ -22,7 +21,8 @@ export const TitleText = ({ title, textStyles }) => (
     variants={textVariant2}
     initial="hidden"
     whileInView="show"
-    className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}>
+    className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyles}`}
+  >
     {title}
   </motion.h2>
 );
